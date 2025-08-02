@@ -1,0 +1,71 @@
+Extract all the specified parameters and their properties from this report and present it as a JSON List as per the following template:
+
+{
+    "test": "IHC Report",
+    "hospital_lab_name": "",
+    "hospital_lab_location": "",
+    "Patient Name":"NA",
+    "parameters": [
+        {
+          "clinicalHistory": "Clinical history details in the report.",
+          "specimen": "Specimen details, including any description of the specimen.",
+          "macroscopicFindings": "Description of macroscopic findings, if present.",
+          "microscopicDescription": "Description of microscopic findings, if present.",
+          "impression": "Summary or diagnosis based on findings.",
+          "comments": "Any additional comments, including any note within the comment section.",
+          "note": "Separate note at the end of the document (distinct from comments)."
+        }
+    ]
+}
+
+Rules:
+
+Extract only information directly relevant to each specified field. Ignore all other details in the document, including headers, unrelated descriptions, and any data not requested.
+
+# CRITICAL DISTINCTION BETWEEN COMMENTS AND NOTES:
+- The "comments" section should ONLY contain information from the "Comments:" section in the report
+- This typically includes the PDL1 interpretation table and any additional comments like "*CPS is for research purpose only"
+- Do NOT include content from the "Note:" section in the comments field
+- The "note" section should ONLY contain information from the "Note:" section with bullet points
+
+# Special instructions for handling tables in comments:
+- When encountering tables (like PDL1 interpretation tables), convert them to a clear textual format
+- Format each table row as a separate statement with proper punctuation
+- Use periods to separate different tumor types and their interpretations
+- Example format: "Non Small Cell Lung Cancer: TPS < 1% - No PDL1 expression. TPS 1-49% - PDL1 expression. TPS > 50% - High PDL1 expression."
+- For each tumor type, start a new sentence with the tumor type name
+- Do not use markdown table formatting or ASCII art in the output
+
+For any distinct "note" at the document's end, extract it separately and include it in the "note" key, even if it contains similar information to the comments.
+
+# Special instructions for handling the note section:
+- IMPORTANT: Extract ONLY the note section that appears INSIDE THE MAIN TABLE with bullet points marked with 'o' symbols
+- This is the note section that appears BEFORE the "Reference:" section and INSIDE the main content box/table
+- DO NOT extract the note at the bottom of the page that mentions "This report is not valid for partial/divided specimens"
+- The correct note section begins with "Note:" followed by bullet points about PDL1 IHC, assay validation, etc.
+- This note section is typically found in the same box/table as the PDL1 interpretation table
+- The note section is DISTINCT from the comments section and should not duplicate that content
+- Format each bullet point as a separate paragraph with proper numbering (1., 2., etc.)
+- Include the Reference section that follows the bullet points if it's part of the note section
+- The note section typically contains information about:
+  * FDA approval for PDL1 testing
+  * Assay validation and performance details
+  * Tumor cells scoring methodology
+  * Tissue processing factors and limitations
+  * Statements about decalcified specimens
+  * Control reactivity information
+- Do NOT include the table of tumor types and expression levels in the note section (that belongs in comments)
+
+Important: Capture only the requested details in this exact JSON format. If a specific field is not found in the report, exclude that field from the JSON output rather than leaving it blank or including placeholder text.
+
+All the Keys : clinicalHistory, specimen, macroscopicFindings, microscopicDescription, impression, comments, note
+These keys should be present in the json, and no other keys should be present.
+
+In some cases the comments section may contain a lot of text and many subheads. The subheaders would be represented by a '-' before the header name. For example: "-Note". If there is a '-' before the header name then it should be considered as a subhead which should come in this section in the json : "comments": "". The comments should include all the text starting from the start of the comments till the point where the text is "Note:" which is without the '-'. This Note would likely be towards the end of the text, with just Note with no dash('-')
+Make sure to extract "References" and add it as a part of the "comments" into the json.
+There might be other text blocks starting which look like: "Interpretive guide for Estrogen and Progesterone Receptor:" or "Optimal algorithm for ER/PgR testing" or "Interpretive Guide for Her-2/neu testing:" or "Scoring system : Her-2/neu" or "Optimal tissue handling guidelines:". If any of these text blocks start with any of these texts, then please add the entire text paragraph within the comments section in the json.
+
+Important note:
+Please go through the page and extract the correct Patient name, Hospital name and its location.
+the address should be same as mentioned in the report.
+Hospital name should be same as per the report. dont confuse it for client name.

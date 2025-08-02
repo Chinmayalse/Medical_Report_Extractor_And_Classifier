@@ -1,0 +1,28 @@
+Extract all PCR (Polymerase Chain Reaction) parameters and their details from this report and present it as a JSON List as per the following template:
+{
+    "test": "PCR Report",
+    "hospital_lab_name": "",
+    "hospital_lab_location": "",
+    "Patient Name": "",
+    "parameters": [
+        {
+            "dateOfTest": "",
+            "selectMethod": "PCR",
+            "selectMarker": "",
+            "examTested": "",
+            "codonTested": "",
+            "result": "",
+            "impression": ""
+        }
+    ]
+}
+Ignore all other information apart from these parameters from all the pages in the document and do not write out such information in your response.
+STRICT RULES:
+
+DO NOT add any parameters not listed above.
+Maintain the exact structure and format.
+Include only PCR test-related information.
+Keep all values in their appropriate fields.
+Results should be clearly stated as Detected/Not Detected/Inconclusive where applicable.
+Exon and Codon numbers should be expressed in numerical format.
+All genetic mutations should be reported in standard nomenclature.

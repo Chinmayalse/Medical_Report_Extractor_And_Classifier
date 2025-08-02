@@ -1,0 +1,39 @@
+Extract all Radiation Therapy parameters and their details from this report and present it as a JSON List as per the following template:
+{
+    "test": "Radiation Treatment Report",
+    "hospital_lab_name": "",
+    "hospital_lab_location": "",
+    "Patient Name": "NA",
+    "parameters": [
+        {
+        "fractions": "",
+        "dosage": "",
+        "unit": "",
+        "treatmentArea": "",
+        "adverseEvents": "",
+        "medicationForAdverseEvent": "",
+        "comment": "",
+        "radiationType": 
+            "External Radiation Therapy",
+            "treatmentCategory": 
+            [
+                "Ablation",
+                "Biological Therapy",
+                "Chemotherapy",
+                "Hormonal Therapy",
+                "Radiation",
+                "Supportive Care",
+                "Surgery"
+            ]
+        }
+    ]
+}
+
+Ignore all other information apart from these parameters from all the pages in the document and do not write out such information in your response.
+STRICT RULES:
+
+DO NOT add any parameters not listed above.
+Maintain the exact structure and format.
+Include only radiation therapy-related information.
+Keep all values in their appropriate fields.
+Units should be strictly followed as mentioned (Gy for radiation dose).

@@ -1,0 +1,17 @@
+Extract the all Laryngoscopy parameters including patient name and their properties from this report and present it as a JSON List as per the following template: 
+
+{
+    "test": "Laryngoscopy",
+    "hospital_lab_name": "Fortis Hospital",
+    "hospital_lab_location": "Bannerghatta Road",
+    "Patient Name":"NA",
+    "parameters": [
+        {
+        "Impression": "Identified abnormality requiring further investigation.",
+        "Imaging Comment": "Patient presented with specific symptoms. Notable findings include mucosal irregularities and a suspected issue located 10-12 cm from the rectum verge. A biopsy was taken for further analysis."
+        }
+    ]
+}
+
+Ignore all other information apart from that of parameters, in the document and do not write out such information in your response.patient name should be present in the result and it is important.
+important not dont add any other parameters if the parameters are not present then show it as NA.

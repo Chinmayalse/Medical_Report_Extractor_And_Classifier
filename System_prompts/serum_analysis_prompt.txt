@@ -1,0 +1,255 @@
+Extract all the Bio Markers and their properties from this report and present it as a JSON List as per the following template: 
+
+{
+    "test": "Serum Bio Markers",
+    "hospital_lab_name": "NH Health City",
+    "hospital_lab_location": "Hosur Road",
+    "Patient Name":"NA",
+    "parameters": [
+            {
+                "Bio Marker": "CA125",
+                "Value": 8.2,
+                "Units": "U/ml"
+            },
+            {
+                "Bio Marker": "CA19-9",
+                "Value": 8.2,
+                "Units": "U/ml"
+            }
+            {
+                "Bio Marker": "CEA",
+                "Value": 1.5,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "CA15-3/CA27.29",
+                "Value": 12.6,
+                "Units": "U/ml"
+            },
+            {
+                "Bio Marker": "Chromogranin A",
+                "Value": 3.0,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Calcitonin",
+                "Value": 5.2,
+                "Units": "pg/ml"
+            },
+            {
+                "Bio Marker": "PSA",
+                "Value": 0.8,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "IgG4 Subclass",
+                "Value": 0.4,
+                "Units": "g/L"
+            },
+            {
+                "Bio Marker": "HCV IgG",
+                "Value": 0.2,
+                "Units": "ratio"
+            },
+            {
+                "Bio Marker": "CRP",
+                "Value": 3.0,
+                "Units": "mg/L"
+            },
+            {
+                "Bio Marker": "5-HIAA",
+                "Value": 2.1,
+                "Units": "mg/24hr"
+            },
+            {
+                "Bio Marker": "Adrenocorticotropic Hormone (ACTH)",
+                "Value": 15.2,
+                "Units": "pg/ml"
+            },
+            {
+                "Bio Marker": "AFP",
+                "Value": 8.2,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "B2M",
+                "Value": 2.5,
+                "Units": "mg/L"
+            },
+            {
+                "Bio Marker": "Beta hCG",
+                "Value": 1.2,
+                "Units": "mIU/ml"
+            },
+            {
+                "Bio Marker": "CA549",
+                "Value": 3.1,
+                "Units": "U/ml"
+            },
+            {
+                "Bio Marker": "Cathepsin D",
+                "Value": 2.4,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Des-gamma-carboxy prothrombin (DCP)",
+                "Value": 7.8,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Gastrin",
+                "Value": 18.2,
+                "Units": "pg/ml"
+            },
+            {
+                "Bio Marker": "HE4",
+                "Value": 35.0,
+                "Units": "pmol/L"
+            },
+            {
+                "Bio Marker": "Homovanillic Acid (HVA)",
+                "Value": 6.0,
+                "Units": "mg/24hr"
+            },
+            {
+                "Bio Marker": "Immunoglobulins",
+                "Value": 1.4,
+                "Units": "g/L"
+            },
+            {
+                "Bio Marker": "Lactate Dehydrogenase (LDH)",
+                "Value": 120,
+                "Units": "U/L"
+            },
+            {
+                "Bio Marker": "Neuron Specific Enolase (NSE)",
+                "Value": 5.4,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Parathyroid hormone-like Protein (PLP)",
+                "Value": 6.2,
+                "Units": "pmol/L"
+            },
+            {
+                "Bio Marker": "Placental Alkaline Phosphatase (PLAP)",
+                "Value": 4.8,
+                "Units": "U/L"
+            },
+            {
+                "Bio Marker": "Prolactin",
+                "Value": 20.2,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Prostatic Acid Phosphatase (PAP)",
+                "Value": 0.9,
+                "Units": "U/L"
+            },
+            {
+                "Bio Marker": "Thyroglobulin",
+                "Value": 1.8,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Serum CRP",
+                "Value": 3.4,
+                "Units": "mg/L"
+            },
+            {
+                "Bio Marker": "Tissue Polypeptide Antigen (TPA)",
+                "Value": 4.1,
+                "Units": "U/L"
+            },
+            {
+                "Bio Marker": "Vanillylmandelic Acid (VMA)",
+                "Value": 4.7,
+                "Units": "mg/24hr"
+            },
+            {
+                "Bio Marker": "CA195",
+                "Value": 1.9,
+                "Units": "U/ml"
+            },
+            {
+                "Bio Marker": "Nuclear Matrix Protein 22",
+                "Value": 2.6,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "B2-Microglobulin",
+                "Value": 2.3,
+                "Units": "mg/L"
+            },
+            {
+                "Bio Marker": "CK-MB",
+                "Value": 8.6,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "MUC-4",
+                "Value": 1.5,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Procalcitonin",
+                "Value": 0.5,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "PEA",
+                "Value": 1.7,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "BRG-1",
+                "Value": 1.4,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Troponin-I",
+                "Value": 0.03,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "Testosterone",
+                "Value": 3.2,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "T3",
+                "Value": 1.5,
+                "Units": "ng/ml"
+            },
+            {
+                "Bio Marker": "T4",
+                "Value": 7.2,
+                "Units": "µg/dl"
+            },
+            {
+                "Bio Marker": "TSH",
+                "Value": 2.8,
+                "Units": "µIU/ml"
+            },
+            {
+                "Bio Marker": "Vitamin B12",
+                "Value": 550,
+                "Units": "pg/ml"
+            },
+            {
+                "Bio Marker": "Vitamin D",
+                "Value": 30,
+                "Units": "ng/ml"
+            }
+        ]
+}
+
+Ignore all other information apart from that of parameters, in the document and do not write out such information in your response.
+Ensure that:
+1. All numerical values are included with their correct units
+2. The format is strictly followed
+3. No additional fields are added
+4. All parameter names are standardized
+5. Sub-parameters are marked as "NA" if not applicable
+STRICT RULES:
+- DO NOT add any parameters not listed above.

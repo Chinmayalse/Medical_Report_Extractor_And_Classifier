@@ -1,0 +1,232 @@
+Extract all Complete Blood Count (CBC)/ Haematology parameters and their properties from this report with the units and present it as a JSON List as per the following template: 
+Ignore all other information apart from that of parameters from all the pages, in the document and do not write out such information in your response. 
+
+{
+    "test": "Complete Blood Count (CBC)",
+    "hospital_lab_name": "NH Health City",
+    "hospital_lab_location": "Hosur Road",
+    "reported_date": "YYYY/MM/DD",
+    "Patient Name":"NA",
+    "parameters": [
+        {
+            "parameter": "Hemoglobin"|"Hb",
+            "sub_parameter": "NA",
+            "value": 8.3,
+            "units": "g/dl"
+        },
+        {
+            "parameter": "Total WBC/leukocyte count",
+            "sub_parameter": "NA",
+            "value": 5.7,
+            "units": "x10^3/ul"
+        },
+        {
+            "parameter": "Platelet count",
+            "sub_parameter": "NA",
+            "value": 284,
+            "units": "x10^3/ul"
+        },
+        {
+            "parameter": "Hematocrit/PCV"|"HCT"|"Haematocrit"|"Hematocrit Ratio"|"HCT/PCV Ratio"|"HCT ratio"|"Packed Cell Volume"|"PCV",
+            "sub_parameter": "NA",
+            "value": 26.7,
+            "units": "%"
+        },
+        {
+            "parameter": "Total RBC count"|"RBC"|"Red cell count"|"Erythrocytes"|"RBCs"|"Red cells"|"Haematids"|"Red Corpuscles"|"Hematids"|"RBC count",
+            "sub_parameter": "NA",
+            "value": 3.99,
+            "units": "millions/cmm"
+        },
+        {
+            "parameter": "WBC/Leukocyte differential count",
+            "sub_parameter": "Neutrophils",
+            "value": 61.2,
+            "units": "%"
+        },
+        {
+            "parameter": "RBC indices",
+            "sub_parameter": "MCV",
+            "value": 66.8,
+            "units": "fl"
+        },
+        {
+            "parameter": "WBC/Leukocyte differential count",
+            "sub_parameter": "Lymphocyte",
+            "value": 29.7,
+            "units": "%"
+        },
+        {
+            "parameter": "WBC/Leukocyte differential count",
+            "sub_parameter": "Eosinophil",
+            "value": 2.8,
+            "units": "%"
+        },
+        {
+            "parameter": "WBC/Leukocyte differential count",
+            "sub_parameter": "Monocyte",
+            "value": 5.7,
+            "units": "%"
+        },
+        {
+            "parameter": "WBC/Leukocyte differential count",
+            "sub_parameter": "Basophil",
+            "value": 0.6,
+            "units": "%"
+        },
+        {
+            "parameter": "RBC indices",
+            "sub_parameter": "MCH",
+            "value": 20.8,
+            "units": "pg"
+        },
+        {
+            "parameter": "RBC indices",
+            "sub_parameter": "MCHC",
+            "value": 31.1,
+            "units": "g/dl"
+        },
+        {
+            "parameter": "RBC indices",
+            "sub_parameter": "RDW",
+            "value": 18.7,
+            "units": "%"
+        }
+    ]
+}
+
+### Additional Instructions:
+
+1. Unit Standardization: 
+Match any encountered unit to **exactly** one of the following standard units.  
+If the report’s unit is not in these aliases, or you cannot logically map it to a CBC unit, skip that parameter.
+
+- **g/dl**  
+  Aliases: ["gm/dL", "g/dL", "g/DL"]
+  
+- **gm%**  
+  Aliases: ["gm%"]
+
+- **xX10e9/L**  
+  Aliases: ["xX10e9/L","x 10^9/L","x10^9/L","X 10^9/L"]
+
+- **X10e12/L**  
+  Aliases: ["X10e12/L","x 10^12/l"]
+
+- **millions/cmm**  
+  Aliases: ["millions/cmm","millions/cumm", "million/cu.mm", "million/c.m.m"]
+
+- **%**  
+  Aliases: ["%", "percentage"]
+
+- **fl**  
+  Aliases: ["fl", "femtoliters"]
+
+- **pg**  
+  Aliases: ["pg", "picograms"]
+
+- **cells/cmm**  
+  Aliases: ["cells/cmm"]
+
+- **cells/uL**  
+  Aliases: ["cells/uL"]
+
+- **/Cumm**  
+  Aliases: ["/Cumm","/cumm","/c.m.m","/C.m.m","/Cmm","/cmm"]
+
+- **Lakhs/cmm**  
+  Aliases: ["Lakhs/cmm","Lakhs/cumm","Lakhs/Cumm"]
+
+- **mg/dL or mmol/L**  
+  Aliases: ["mg/dL or mmol/L"]
+
+- **mg/dl**  
+  Aliases: ["mg/dl"]
+
+- **ml/min or ml/sec**  
+  Aliases: ["ml/min or ml/sec"]
+
+- **ml/min/m2**  
+  Aliases: ["ml/min/m2"]
+
+- **mm/Hr**  
+  Aliases: ["mm/Hr"]
+
+- **mmol/L**  
+  Aliases: ["mmol/L"]
+
+- **mu/L**  
+  Aliases: ["mu/L"]
+
+- **ng/dl**  
+  Aliases: ["ng/dl"]
+
+- **Secs**  
+  Aliases: ["Secs"]
+
+- **thou/mm3**  
+  Aliases: ["thou/mm3"]
+
+- **ug/dL**  
+  Aliases: ["ug/dL"]
+
+- **U/L**  
+  Aliases: ["U/L"]
+
+- **IU/L**  
+  Aliases: ["IU/L"]
+
+- **Mil/ul**  
+  Aliases: ["Mil/ul"]
+
+- **mil/μL**  
+  Aliases: ["mil/μL","million/μL"]
+
+- **10^6/cu.mm**  
+  Aliases: ["10^6/cu.mm"]
+
+- **10^6/uL**  
+  Aliases: ["10^6/uL","10^6/µL","10^6/ul"]
+
+- **Thousand/µL**  
+  Aliases: ["Thousand/µL"]
+
+- **uIU/ml**  
+  Aliases: ["uIU/ml"]
+
+- **X10^6/mm^3**  
+  Aliases: ["X10^6/mm^3"]
+
+- **mEq/L**  
+  Aliases: ["mEq/L"]
+
+- **K/cmm**  
+  Aliases: ["K/cmm"]
+
+- **%CV**  
+  Aliases: ["%CV"]
+
+- **10^3/mm^3**  
+  Aliases: ["10^3/mm^3"]
+
+- **mill/mm3**  
+  Aliases: ["mill/mm3"]
+
+- **x10^3/ul**  
+  Aliases: ["thousands/μL","thousands/microliter","10^3/μl"]
+
+2. Handling Aliases: 
+   - Parameters with aliases are separated using |. For example:
+     - "Hematocrit/PCV"|"HCT"|"Haematocrit"|"Packed Cell Volume"
+   - If an alias is encountered in the document, extract it but represent the parameter using the first name listed in the JSON (e.g., "Hematocrit/PCV" in this case).
+
+### STRICT RULES:
+
+- DO NOT add any parameters or units not listed above.
+- Ensure all units conform to the standardized format.
+- "xX10e9/L": ["xX10e9/L","x 10^9/L","x10^9/L","X 10^9/L"] this are alise for "xX10e9/L" if unit containes any alise of it then return only "xX10e9/L" dont capture 
+- check alias properly do not capture unit with another unit alias or check unit properly for example you are capturing millions/cmm but its million/μL its alias of mil/μL return proper unit
+- Get proper unit for MCHC from report
+- Extract proper unit. If it isnt mentioned in the standard unit list then check for aliases. If it isn't there in Aliases also, then study the standard units and try to map the extracted unit to standard units. For your reference the report is of complete blood count (CBC) and the result may include many aliases due to multiple diagonstic centers and them not having a standard template for either parameters and units. Another reason would be muliple methods in obtaining the values.
+- Take proper unit for "Total RBC count" parameter. (e.g., If the unit in the report is "10^6/ul" map it to "10^6/uL" , which is a standard unit).
+- "xX10e9/L": ["xX10e9/L","x 10^9/L","x10^9/L","X 10^9/L"] this are alise for "xX10e9/L" if unit containes any alis of it then return only "xX10e9/L" dont capture. 

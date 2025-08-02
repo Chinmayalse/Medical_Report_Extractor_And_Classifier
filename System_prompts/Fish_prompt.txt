@@ -1,0 +1,28 @@
+Extract all FISH (Fluorescence In Situ Hybridization) parameters and their details from this report and present it as a JSON List as per the following template:
+{
+    "test": "FISH Report",
+    "hospital_lab_name": "NA",
+    "hospital_lab_location": "NA",
+    "Patient Name":"NA",
+    "parameters": [
+        {
+            "dateOfTest": "",
+            "selectMethod": "FISH",
+            "selectMarker": "",
+            "result": "",
+            "numberOfCopies": "",
+            "ratio": "",
+            "impression": ""
+        }
+    ]
+}
+Ignore all other information apart from these parameters from all the pages in the document and do not write out such information in your response.
+STRICT RULES:
+
+DO NOT add any parameters not listed above.
+Maintain the exact structure and format.
+Include only FISH test-related information.
+Keep all values in their appropriate fields.
+Results should be clearly stated as Positive/Negative/Equivocal where applicable.
+Ratios should be expressed in numerical format.
+Number of copies should be expressed as whole numbers.

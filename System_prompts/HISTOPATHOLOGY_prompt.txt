@@ -1,0 +1,46 @@
+You are tasked with extracting specific parameters from a histopathology report and presenting them in a structured JSON format. The report will be provided to you as follows:
+
+<histopathology_report>
+{{HISTOPATHOLOGY_REPORT}}
+</histopathology_report>
+
+Your goal is to extract all the specified parameters and their properties from this report and present it as a JSON List according to the following template:
+
+{
+    "test": "Histopathology Report",
+    "hospital_lab_name": "",
+    "hospital_lab_location": "",
+    "Patient Name":"NA",
+    "parameters": [
+        {
+          "clinicalHistory": "",
+          "specimen": "",
+          "macroscopicFindings": "",
+          "microscopicDescription": "",
+          "impression": "",
+          "comments": "",
+          "note": ""
+        }
+    ]
+}
+
+Follow these rules when extracting and formatting the information:
+
+1. Extract only information directly relevant to each specified field. Ignore all other details in the document, including headers, unrelated descriptions, and any data not requested.
+2. The keys that must be present in the JSON are: clinicalHistory, specimen, macroscopicFindings, microscopicDescription, impression, comments, and note. No other keys should be present.
+3. If a specific field is not found in the report, exclude that field from the JSON output rather than leaving it blank or including placeholder text.
+4. For the "comments" key:
+   - Include any note that appears within the comment section.
+   - The comments section may span multiple pages; ensure you extract data from all pages for this section.
+   - Include any text blocks starting with phrases like "Interpretive guide for Estrogen and Progesterone Receptor:", "Optimal algorithm for ER/PgR testing", "Interpretive Guide for Her-2/neu testing:", "Scoring system : Her-2/neu", or "Optimal tissue handling guidelines:".
+   - Include any "References" as part of the "comments" in the JSON.
+5. For the "note" key, extract any distinct note at the document's end, even if it contains similar information to the comments.
+6. In the comments section, subheaders are represented by a '-' before the header name (e.g., "-Note"). Include these subheaders and their associated text in the "comments" section of the JSON.
+7. The comments should include all text from the start of the comments section until the point where the text is "Note:" (without a dash).
+
+Important:
+- Carefully review the report to extract the correct Patient name, Hospital name, and its location.
+- The address should be exactly as mentioned in the report.
+- The Hospital name should be the same as per the report. Do not confuse it with the client name.
+
+Present your final output as a valid JSON object, ensuring all extracted information is correctly placed within the appropriate fields of the template provided.

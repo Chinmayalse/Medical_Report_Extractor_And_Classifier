@@ -1,0 +1,280 @@
+Extract all Clinical Biochemistry test names and their parameters along with their properties from this report with the units, and present it as a JSON List as per the following template: 
+Ignore all other information apart from that of parameters from all the pages, in the document and do not write out such information in your response. 
+
+{
+    "test": "Clinical Biochemistry",
+    "hospital_lab_name": "",
+    "hospital_lab_location": "",
+    "reported_date": "YYYY/MM/DD",
+    "Patient Name":" ",
+    "parameters":[
+        {
+            "testname": "Electrolytes",
+            "parameters": [
+                {
+                    "parameter": "Chloride"|"Cl-"|"Cl",
+                    "value": 5.7,
+                    "units": "%"
+                },
+                {
+                    "parameter": "Potassium"|"K+"|"POTASSIUM",                
+                    "value": 5.7,
+                    "units": "g/dl"
+                },
+                {
+                    "parameter": "Sodium"|"Na+",
+                    "value": 5.7,
+                    "units": "gm%"
+                },
+            ],
+        },
+        {
+            "testname": "Glucose tolerance",
+            "parameters": [
+                {
+                    "parameter": "Fasting blood sugar",
+                    "value": 5.7,
+                    "units": "μg/dl"
+                },
+                {
+                    "parameter": "HbA1c",                
+                    "value": 5.7,
+                    "units": "μIU/ml"
+                },
+                {
+                    "parameter": "Post pranadial blood sugar",
+                    "value": 5.7,
+                    "units": "mg/dL or mmol/L"
+                },
+                {
+                    "parameter": "Random blood sugar"|"Sugar(R)"|"Blood Sugar Random",
+                    "value": 5.7,
+                    "units": "mg/dL"
+                },
+            ],
+        },
+        {
+            "testname": "Lipid profile",
+            "parameters": [
+                {
+                    "parameter": "HDL",
+                    "value": 5.7,
+                    "units": "ml/min or ml/sec"
+                },
+                {
+                    "parameter": "LDL",                
+                    "value": 5.7,
+                    "units": "ml/min/m2"
+                },
+                {
+                    "parameter": "Total cholestrol",
+                    "value": 5.7,
+                    "units": "mmol/L"
+                },
+                {
+                    "parameter": "Triglycerides",
+                    "value": 5.7,
+                    "units": "mu/L"
+                },
+                {
+                    "parameter": "VLDL",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+            ],
+        },
+        {
+            "testname": "Liver function test"|"LFT",
+            "parameters": [
+                {
+                    "parameter": "Albumin",
+                    "value": 5.7,
+                    "units": "ml/min or ml/sec"
+                },
+                {
+                    "parameter": "Alkaline Phosphatase",                
+                    "value": 5.7,
+                    "units": "ml/min/m2"
+                },
+                {
+                    "parameter": "ALT"|"Serum Glutamate Pyruvate Transaminase"|"SGPT"|"Alanine Aminotransferase"|"Glutamate Pyruvate Transaminase"|"Alanine Transaminase",
+                    "value": 5.7,
+                    "units": "mmol/L"
+                },
+                {
+                    "parameter": "AST"|"Aspartate Aminotransferase"|"SGOT"|"Aspartate Aminotransferase"|"Glutamate Oxaloacetate Transaminase",
+                    "value": 5.7,
+                    "units": "mu/L"
+                },
+                {
+                    "parameter": "Direct Bilurubin",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+                {
+                    "parameter": "Globulin",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+                {
+                    "parameter": "Indirect bilirubin",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+                {
+                    "parameter": "Serum total protein",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+                {
+                    "parameter": "Gamma-Glutamyl Transferase (GGT)",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+                {
+                    "parameter": "Total bilirubin",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+            ],
+        },
+        {
+            "testname": "Renal function test"|"RFT",
+            "parameters": [
+                {
+                    "parameter": "Blood urea nitrogen",
+                    "value": 5.7,
+                    "units": "ml/min or ml/sec"
+                },
+                {
+                    "parameter": "Creatinine clearance",                
+                    "value": 5.7,
+                    "units": "ml/min/m2"
+                },
+                {
+                    "parameter": "eGFR",
+                    "value": 5.7,
+                    "units": "mmol/L"
+                },
+                {
+                    "parameter": "Serum Creatinine"|"S. Creatinine"|"S.Creatinine","Creatinine”,
+                    "value": 5.7,
+                    "units": "mu/L"
+                },
+                {
+                    "parameter": "Urea",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+                {
+                    "parameter": "Uric acid",
+                    "value": 5.7,
+                    "units": "ng/dl"
+                },
+               
+            ],
+        },
+        {
+            "testname": "Thyroid profile",
+            "parameters": [
+                {
+                    "parameter": "T3",
+                    "value": 5.7,
+                    "units": "ml/min or ml/sec"
+                },
+                {
+                    "parameter": "T4",                
+                    "value": 5.7,
+                    "units": "ml/min/m2"
+                },
+                {
+                    "parameter": "TSH",
+                    "value": 5.7,
+                    "units": "mmol/L"
+                },
+               
+            ],
+        },
+        {
+            "testname": "Tumor lysis syndrome",
+            "parameters": [
+                {
+                    "parameter": "CRP",
+                    "value": 5.7,
+                    "units": "ml/min or ml/sec",
+                },
+                {
+                    "parameter": "LDH",                
+                    "value": 5.7,
+                    "units": "ml/min/m2"
+                },
+                {
+                    "parameter": "Uric acid",
+                    "value": 5.7,
+                    "units": "mmol/L"
+                },
+               
+            ],
+        },
+        {
+            "testname": "Viral markers",
+            "parameters": [
+                {
+                    "parameter": "CMV",                    
+                    "growth":"Positive"
+                },
+                {
+                    "parameter": "Hepatitis B antigen",
+                    "growth":"Negative"
+                },
+                {
+                    "parameter": "Hepatitis C",
+                    "growth":"Non reactive"|"Non-reactive"
+                },
+                {
+                    "parameter": "HIV",
+                    "growth":"Reactive"
+                },
+               
+            ],
+        }
+    ]
+    
+}
+
+### Additional Instructions:
+
+1. Unit Standardization: 
+   - Map units found in the report to their standardized format. Below is the list of standard units and their variations in brackets for mapping:
+     Standard Units and Their Aliases:
+     - **%**  
+       Aliases: ["%", "percentage"]
+     - **μg/dl**  
+       Aliases: ["μg/dl", "μg/dL"]
+     - **mg/dL**  
+       Aliases: ["mg/dL", "mg/dl"]
+     - **mmol/L**  
+       Aliases: ["mmol/L"]
+     - **ml/min**  
+       Aliases: ["ml/min", "ml/sec"]
+
+   - If a unit from the document matches any of the variations listed above, use the standardized unit in the output JSON, dont use same unit for same parameter capture proper unit from report which are provided in above format.
+
+2. Handling Aliases: 
+   - Parameters with aliases are separated using "|". For example : "Serum Creatinine"|"Creatinine"
+   - Test names with aliases are separated using "|". For example: "Liver function test"|"LFT"
+   - If an alias is encountered in the document, extract it but represent the testname and parameter using the first name listed in the JSON .
+   
+
+### STRICT RULES:
+
+- DO NOT add any parameters or units not listed above.
+- Ensure all units conform to the standardized format.
+- Carefully read and capture the exact numeric value for any recognized parameter from the report (including parameters like ALT, LDL, etc.)
+- If any alias appears in the report, use the canonical name (the first name listed) when filling the "parameter" or "testname" field in the JSON output
+- If a report shows a parameter but does not mention a test name, still include that parameter under its correct (matching) test name in the output JSON.
+- check alias properly and return its parameter for example: i have added "Creatinine" as ailas of "Serum Creatinine" which are separted by "|" capture it.
+- If a “Reported date” (or similarly named field) is found in the report, capture it and add it to "reported_date" in the format YYYY/MM/DD. If no date is found, leave it empty.
+- If any parameter or its alias from a test matches content in the report, include that test in the response. For all other parameters under that test that are not found in the report, set their "value" and "units" to empty strings (""). If none of the parameters or their aliases from a test are found in the report, do not include that test in the response.
+- For viral markers or other “growth” fields, read the exact status (e.g., “Positive”, “Negative”, “Reactive”, “Non reactive”).
+- If an alias form like “Non-reactive” appears, standardize it to the canonical version “Non reactive” (or whatever your first-listed version is).
